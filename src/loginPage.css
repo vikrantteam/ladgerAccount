@@ -1,0 +1,81 @@
+.login-main-div {
+  width: 99%;
+  height: 99vh;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px gray;
+}
+.login-div {
+  background: #000053;
+  width: 90%;
+  height: 80vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0px 295px 295px 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.login-left-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.login-left-div > img {
+  width: 75%;
+}
+
+.login-right-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.login-right-div > .input-div {
+  width: 80%;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0px;
+}
+.login-right-div > button {
+  font-size: 20px;
+  padding: 3px 10px;
+  border-radius: 7px;
+  border: none;
+  position: relative;
+  left: 70%;
+  top: 15%;
+  color: #010155;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login-right-div > .input-div label {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+}
+.login-right-div > .input-div input {
+  font-size: 20px;
+  font-weight: 400;
+  /* text-transform: capitalize; */
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
