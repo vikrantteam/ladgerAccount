@@ -23,6 +23,9 @@ const Navbar = () => {
     <li>
       <NavLink to="/ladger">Ladger Account</NavLink>
     </li>
+    <li>
+      <NavLink to="/login"  onClick={()=>{localStorage.removeItem("user"),navigate('/')}}>Logout</NavLink>
+    </li>
   </ul>
 </div>
     </>

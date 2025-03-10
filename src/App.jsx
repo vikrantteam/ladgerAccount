@@ -7,6 +7,8 @@ import Billing from "./Billing";
 import Database from "./Database";
 import Ladger from "./Ladger";
 import LoginPage from "./LoginPage";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
+        path: "/login",
         element: <LoginPage />,
       },
       {
@@ -37,11 +39,12 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+function App(){
   return (
     <>
       <RouterProvider router={router}>
     <LoginPage />
+    
 
       </RouterProvider>
     </>

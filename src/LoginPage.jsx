@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./loginPage.css";
 import login from "../src/assets/login.gif";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  useEffect(()=>{
+    if(localStorage.getItem('user')!='login'){
+      navigate('/login')
+    }
+  })
   const [loginDetail, setLoginDetail] = useState({
     username: "",
     password: "",
@@ -22,13 +27,18 @@ const LoginPage = () => {
       }),
     });
     const data = await fd.json();
-    // const getData = localStorage.getItem("user");
     if (data.status === 202) {
-      navigate("/customer");
+      localStorage.setItem("user","login")
       alert(data.message);
       // setCheckValid(true);
     } else {
       alert(data.error);
+    }
+    if(localStorage.getItem("user")===data.code){
+      navigate("/customer");
+    }else{
+      navigate("/login");
+
     }
   };
   return (
