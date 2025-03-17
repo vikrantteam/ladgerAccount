@@ -13,7 +13,8 @@ const Database = () => {
 
   const fetchData = async () => {
     try {
-      const fd = await fetch("http://localhost:8000/bill");
+      // const fd = await fetch("http://localhost:8000/bill");
+      const fd = await fetch("https://ladgerprojectbackend.onrender.com/bill");
       const data = await fd.json();
       setGetData(data);
       setSearchData(data)
@@ -42,14 +43,14 @@ const Database = () => {
   }
   const searchDataEventHandler = (e) => {
     const {name,contact}=searchInputField
-    console.log(searchInputField);
+    // console.log(searchInputField);
     
     e.preventDefault();
     const filtered = searchData.filter((item) =>
       item.name.toLowerCase().includes(name.toLowerCase())
     );
     setSearchData(filtered)
-    console.log("hello");
+  
     
     
   }

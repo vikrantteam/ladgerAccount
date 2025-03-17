@@ -48,7 +48,8 @@ const Ladger = () => {
       });
 
   const fetchData = async () => {
-    const fd = await fetch("http://localhost:8000/ladger");
+    const fd = await fetch("https://ladgerprojectbackend.onrender.com/ladger");
+    // const fd = await fetch("http://localhost:8000/ladger");
     const data = await fd.json();
     if (data.status === 202) {
       setGetData(data.fetchData);
@@ -74,7 +75,8 @@ const Ladger = () => {
     e.preventDefault();
     const { name, address, contact } = addUserDetail;
     try {
-      const fd = await fetch("http://localhost:8000/ladger", {
+      // const fd = await fetch("http://localhost:8000/ladger", {
+      const fd = await fetch("https://ladgerprojectbackend.onrender.com/ladger", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,7 +117,8 @@ const Ladger = () => {
       const { name, address, contact } = addTempData;
       const {summary,due,pay,balance} = addNewRecord;
       if(summary!='' || due!='' ||pay!='' || balance!=''){
-        const fd = await fetch("http://localhost:8000/ladger", {
+        const fd = await fetch("https://ladgerprojectbackend.onrender.com/ladger", {
+        // const fd = await fetch("http://localhost:8000/ladger", {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

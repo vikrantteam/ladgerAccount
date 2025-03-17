@@ -200,7 +200,8 @@ const Billing = () => {
     const { name, contact, address, city, state, pan, invoice } =
     inputDetails;
     try {
-      const fd = await fetch("http://localhost:8000/bill", {
+      const fd = await fetch("https://ladgerprojectbackend.onrender.com/bill", {
+      // const fd = await fetch("http://localhost:8000/bill", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

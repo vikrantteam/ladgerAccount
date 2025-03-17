@@ -9,7 +9,8 @@ const Customer = () => {
   });
 
   const fetchData = async () => {
-    const fd = await fetch("http://localhost:8000/customer");
+    const fd = await fetch("https://ladgerprojectbackend.onrender.com/customer");
+    // const fd = await fetch("http://localhost:8000/customer");
     const data = await fd.json();
     const tempData = data.fetchData;
     // setGetData(data.fetchData);
